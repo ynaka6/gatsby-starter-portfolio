@@ -6,10 +6,6 @@ import tw from "tailwind.macro"
 const ContentStyled = styled.div`
   ${tw`p-4 leading-normal`};
 
-  a {
-    ${tw`text-blue`};
-  }
-
   a[target="_blank"]:not(.gatsby-resp-image-link)::after {
     content: '';
     display: inline-block;

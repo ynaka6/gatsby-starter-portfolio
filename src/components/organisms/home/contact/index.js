@@ -69,7 +69,7 @@ const Contact = () => (
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="w-2/3 bg-teal-dark hover:bg-teal text-lg text-white font-bold py-4 px-8 border-b-4 border-teal-darker hover:border-teal-dark rounded"
+              className="w-2/3 bg-indigo-dark hover:bg-indigo text-lg text-white font-bold py-4 px-8 border-b-4 border-indigo-darker hover:border-indigo-dark rounded"
             >
               送信する
             </button>

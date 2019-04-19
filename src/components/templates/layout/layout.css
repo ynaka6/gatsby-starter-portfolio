@@ -2,6 +2,10 @@ body {
   @apply bg-grey-lightest font-sans;
 }
 
+a {
+  @apply text-indigo-dark;
+}
+
 .logo {
   text-shadow: 3px 3px 4px #999;
   @apply no-underline text-black relative;
@@ -11,7 +15,7 @@ body {
   z-index: -1;
   top: -6px;
   left: -10px;
-  @apply absolute bg-teal p-5 rounded-full opacity-50;
+  @apply absolute bg-indigo-dark p-5 rounded-full opacity-75;
 }
 
 .inview-section-hidden {

@@ -68,7 +68,7 @@ function SkillItem(props) {
       <div className="w-full align-center items-center align-middle content-center flex">
         <div className="w-full bg-grey-light rounded items-center align-middle align-center flex-1">
           <div
-            className="bg-green-light text-xs leading-none py-1 text-center text-grey-darkest rounded"
+            className="bg-indigo text-xs leading-none py-1 text-center text-grey-darkest rounded"
             style={{
               width: props.percentage
             }}

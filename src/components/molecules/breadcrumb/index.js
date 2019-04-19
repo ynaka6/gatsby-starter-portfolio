@@ -27,7 +27,7 @@ const BreadcrumbStyled = styled.div`
         }
 
         a {
-          ${tw`font-bold text-blue no-underline`};
+          ${tw`font-bold no-underline`};
         }
 
         span {

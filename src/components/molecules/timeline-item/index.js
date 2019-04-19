@@ -34,7 +34,7 @@ const TimelineItemStyle = styled.div`
 
 const TimelineItem = ({ work }) => {
   const status = work.status ? <span className="text-xs border border-red px-2 py-1 rounded bg-red-light text-white">{work.status}</span> : null
-  const link = work.link ? <a href={work.link} target="_blank" rel="nofollow noopener noreferrer" class="text-blue ml-1"><LinkIcon className="fill-current w-6 h-6" /></a> : null
+  const link = work.link ? <a href={work.link} target="_blank" rel="nofollow noopener noreferrer" class="ml-1"><LinkIcon className="fill-current w-6 h-6" /></a> : null
   return (
     <TimelineItemStyle>
       <div className="head">
