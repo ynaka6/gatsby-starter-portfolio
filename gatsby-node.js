@@ -14,7 +14,8 @@ exports.createPages = ({ graphql, actions }) => {
   createRedirect({
     fromPath: 'https://gatsby-starter-portfolio-nnn.netlify.com/*',
     toPath: 'https://gatsby-starter-portfolio.nakamu.life/:splat',
-    isPermanent: true
+    isPermanent: true,
+    force: true
   })
   
 
