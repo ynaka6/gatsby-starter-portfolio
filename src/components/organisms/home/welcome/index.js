@@ -24,7 +24,7 @@ const Welcome = () => (
     <div className="container mx-auto my-20">
       <div className="flex justify-center items-center px-4 p-10">
           <div className="text-center w-full">
-            <h3 className="text-black text-3xl">Hi, Everyone!</h3>
+            <h3 className="text-black text-3xl">Hi, Everyone</h3>
             <h1 className="text-black font-bold my-5 text-5xl">I'm Nakamu.</h1>
             <p className="text-black text-3xl">WEB Developer & Mentor</p>
             <div className="my-10">
