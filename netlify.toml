@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  command = "gatsby build"
+
+# [[redirects]]
+#   from = "https://gatsby-starter-portfolio-nnn.netlify.com/*"
+#   to = "https://gatsby-starter-portfolio.nakamu.life/:splat"
+#   force = true

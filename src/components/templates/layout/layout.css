@@ -1,0 +1,24 @@
+body {
+  @apply bg-grey-lightest font-sans;
+}
+
+.logo {
+  text-shadow: 3px 3px 4px #999;
+  @apply no-underline text-black relative;
+}
+.logo:before {
+  content: '';
+  z-index: -1;
+  top: -6px;
+  left: -10px;
+  @apply absolute bg-teal p-5 rounded-full opacity-50;
+}
+
+.inview-section-hidden {
+  @apply mt-10 opacity-0;
+}
+
+.inview-section-active {
+  transition: all 1000ms ease;
+  @apply mt-0 opacity-100;
+}
