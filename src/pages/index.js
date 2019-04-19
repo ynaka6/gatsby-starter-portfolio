@@ -26,7 +26,10 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark(limit: 4) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date]},
+      limit: 4
+    ) {
       totalCount
       edges {
         node {

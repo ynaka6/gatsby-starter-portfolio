@@ -25,6 +25,14 @@ const ContentStyled = styled.div`
   h2 {
     ${tw`my-2`};
 
+    &:first-child {
+      ${tw`text-center`};
+
+      & + ul {
+        ${tw`pt-16 pb-5 pl-10 -mt-12 mb-10 ml-0 bg-grey-lightest border leading-loose`};
+      }
+    }
+
     &:not(first-child) {
       ${tw`mt-8`};
     }  

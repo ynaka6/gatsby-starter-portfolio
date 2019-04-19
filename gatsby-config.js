@@ -75,6 +75,27 @@ module.exports = {
               target: "_blank",
               rel: "nofollow, noopener, noreferrer"
             }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              icon: false,
+              className: `custom-class`,
+              maintainCase: false,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-toc',
+            options: {
+              header: '目次', // the custom header text
+              include: [
+                'contents/**/*.md' // an include glob to match against
+              ],
+              mdastUtilTocOptions: {
+                maxDepth: 3
+              }
+            }
           }
         ],
       },
