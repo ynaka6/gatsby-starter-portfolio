@@ -25,7 +25,7 @@ const Blog = (props) => {
           <div className="lg:flex justify-center w-full mt-6 mb-10">
 
             {props.posts.map(({ node }) => (
-              <div key={node.fields.slug} className="lg:w-1/4">
+              <div key={node.fields.slug} className="mx-2 lg:mx-0 lg:w-1/4">
                 <div className="shadow-lg my-2">
 
                   <HeroImage node={node.frontmatter.hero} props={{ alt: node.frontmatter.title }} />

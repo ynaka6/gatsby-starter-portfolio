@@ -4,8 +4,11 @@ import styled from "styled-components"
 import tw from "tailwind.macro"
 
 const TagsStyle = styled.ul`
-  ${tw`list-reset flex text-sm`};
+  ${tw`list-reset`};
   
+  & > li {
+    ${tw`inline-block`}
+  }
   & > li:not(:last-child) {
     ${tw`mr-2`};
 

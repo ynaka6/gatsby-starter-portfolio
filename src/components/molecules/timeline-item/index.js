@@ -2,11 +2,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import tw from "tailwind.macro"
+import LinkIcon from "@components/atoms/icon/link-line"
 import Tags from "@components/molecules/tags";
 
 const TimelineItemStyle = styled.div`
-  padding: 3em 2em 2em;
-  ${tw`relative border-l-2 leading-normal`};
+  ${tw`relative border-l-2 leading-normal pt-12 pb-6 pl-8`};
   
 	&:after {
 		left: -7px;
@@ -33,7 +33,8 @@ const TimelineItemStyle = styled.div`
 `
 
 const TimelineItem = ({ work }) => {
-  const status = work.status ? <span className="text-xs border border-red px-2 py-1 rounded bg-red-light text-white">{work.status}</span> : null;
+  const status = work.status ? <span className="text-xs border border-red px-2 py-1 rounded bg-red-light text-white">{work.status}</span> : null
+  const link = work.link ? <a href={work.link} target="_blank" rel="nofollow noopener noreferrer" class="text-blue ml-1"><LinkIcon className="fill-current w-6 h-6" /></a> : null
   return (
     <TimelineItemStyle>
       <div className="head">
@@ -42,7 +43,7 @@ const TimelineItem = ({ work }) => {
         </p>
         {status}
       </div>
-      <h3>{work.title}</h3>
+      <h3>{work.title}{link}</h3>
       <p className="description">{work.description}</p>
       <Tags tags={work.tags} />
     </TimelineItemStyle>

@@ -7,7 +7,8 @@
         "status":  "運用開発中",
         "tags": [
             "PHP7.3", "Laravel5.8", "nginx", "MySQL5.7", "jQuery", "Bootstrap4"
-        ]
+        ],
+        "link": "https://www.justjob.jp"
     },
     {
         "title": "【業務委託】会計・経理ツール開発",
@@ -17,7 +18,8 @@
         "status":  "終了",
         "tags": [
             "PHP7.2", "Laravel5.6", "nginx", "MariaDB", "jQuery", "Bulma"
-        ]
+        ],
+        "link": ""
     },
     {
         "title": "【業務委託】Laravel5.5を利用したスキルシェアサービス開発",
@@ -27,6 +29,7 @@
         "status":  "運用開発中",
         "tags": [
             "PHP7.2", "Laravel5.5", "nginx", "MariaDB", "jQuery"
-        ]
+        ],
+        "link": ""
     }
 ]
