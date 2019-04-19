@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from "@components/templates/layout"
+import Breadcrumb from "@components/molecules/breadcrumb"
 import ArticleSection from "@components/organisms/blog-post/article"
 import ProfileSection from "@components/organisms/blog-post/profile"
 import SEO from "@components/seo"
@@ -17,6 +18,11 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className="container mx-auto mt-20">
           <div className="flex flex-col justify-center">
+            <Breadcrumb breadcrumbs={[
+              { to: '/', label: 'Home' },
+              { to: `/post/${post.fields.slug}`, label: post.frontmatter.title, active: true },
+            ]}
+            />
             <ArticleSection post={post} previous={previous} next={next} />
             <ProfileSection />
           </div>
@@ -38,6 +44,9 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
+      fields {
+        slug
+      }
       excerpt(pruneLength: 160)
       html
       frontmatter {
