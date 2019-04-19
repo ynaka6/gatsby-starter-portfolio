@@ -26,8 +26,12 @@ const ContentStyled = styled.div`
     ${tw`my-2`};
 
     &:not(first-child) {
-      ${tw`mt-5`};
+      ${tw`mt-8`};
     }  
+  }
+
+  p {
+    ${tw`mb-4`};
   }
 `
 
