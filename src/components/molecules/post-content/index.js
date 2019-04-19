@@ -29,7 +29,8 @@ const ContentStyled = styled.div`
       ${tw`text-center`};
 
       & + ul {
-        ${tw`pt-16 pb-5 pl-10 -mt-12 mb-10 ml-0 bg-grey-lightest border leading-loose`};
+        margin-top: -4rem;
+        ${tw`pt-20 pb-5 pl-10 mb-10 ml-0 bg-grey-lightest border leading-loose`};
       }
     }
 
