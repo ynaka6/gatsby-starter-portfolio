@@ -6,3 +6,4 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/tailwind.css"
+import "prism-themes/themes/prism-atom-dark.css"

@@ -34,9 +34,29 @@ const ContentStyled = styled.div`
       ${tw`mt-8`};
     }  
   }
+  h3 {
+    ${tw`my-2`};
+  }
 
-  p {
+  p, ul {
     ${tw`mb-4`};
+  }
+
+  blockquote {
+    ${tw`relative italic text-grey-dark bg-grey-lighter mb-4 py-4 px-10`};
+
+    &:before {
+      content: '"';
+      ${tw`inline-block absolute text-grey-darker text-3xl pin-t pin-l pl-4 pt-2`};
+    }
+
+    p {
+      ${tw`p-0 mt-4`};
+    }
+  }
+
+  .gatsby-highlight {
+    ${tw`mb-10`};
   }
 `
 

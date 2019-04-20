@@ -27,11 +27,12 @@ const Blog = (props) => {
             {props.posts.map(({ node }) => (
               <div key={node.fields.slug} className="mx-2 lg:flex lg:w-1/4">
                 <div className="shadow-lg my-2">
-
-                  <HeroImage node={node.frontmatter.hero} props={{ alt: node.frontmatter.title }} />
-                  <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{node.frontmatter.title}{" "}</div>
-                    <p className="text-grey-darker text-base">{node.frontmatter.description}{" "}</p>
+                  <Link to={`/post/${node.fields.slug}`}>
+                    <HeroImage node={node.frontmatter.hero} props={{ alt: node.frontmatter.title }} />
+                  </Link>
+                  <div className="px-4 py-4">
+                    <Link to={`/post/${node.fields.slug}`} className="block text-black hover:text-grey-darkest font-bold text-lg mb-2 no-underline">{node.frontmatter.title}{" "}</Link>
+                    <p className="text-grey-darker text-sm">{node.frontmatter.description}{" "}</p>
                     <div className="mt-4 text-right">
                       <Link to={`/post/${node.fields.slug}`} className="inline-block bg-indigo text-white no-underline py-2 px-3 hover:bg-indigo-dark">More</Link>
                     </div>

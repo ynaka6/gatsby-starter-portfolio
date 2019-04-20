@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import tw from "tailwind.macro"
 import InViewMonitor from 'react-inview-monitor';
@@ -42,6 +43,23 @@ const ArticleSection = ({ post, previous, next}) => (
       <HeroImage node={post.frontmatter.hero} props={{ alt: post.frontmatter.title }} />
       <hr/>
       <PostContent post={post} />
+      <hr/>
+      <ul class="list-reset p-4 flex justify-between items-center">
+        <li class="w-1/2">
+          {previous && (
+            <Link to={`post/${previous.fields.slug}`} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li class="w-1/2">
+          {next && (
+            <Link to={`post/${next.fields.slug}`} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </ul>
     </ArticleStyled>
   </InViewMonitor>
 )
