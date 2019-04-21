@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet';
 
 import SEO from "@components/seo"
 import Layout from "@components/templates/layout"
@@ -16,6 +17,10 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <Helmet>
+          <script type="text/javascript" src="//cdn.iframe.ly/embed.js" charset="utf-8"/>
+        </Helmet>
+
         <div className="container mx-auto mt-20">
           <div className="flex flex-col justify-center">
             <Breadcrumb breadcrumbs={[

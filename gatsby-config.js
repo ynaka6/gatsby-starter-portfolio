@@ -122,6 +122,14 @@ module.exports = {
         extensions: []
       }
     },
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          "IFRAMELY_API_KEY"
+        ]
+      },
+    },
   ],
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 
 class Iframely extends React.Component  {
-  _isMounted = false;
 
   constructor(...args) {
     super(...args)
@@ -9,22 +8,16 @@ class Iframely extends React.Component  {
   }
 
   componentDidMount() {
-    this._isMounted = true;
-    const s = document.createElement('script')
-    s.src = '//cdn.iframe.ly/embed.js'
-    s.setAttribute('data-timestamp', + new Date())
-    this.ref.current.appendChild(s)
-    s.onload = () => {
-      window.iframely && window.iframely.load();
-    }
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
+    window.iframely && window.iframely.load();
   }
 
   getIframelyHtml(href) {
-    return { __html: '<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="' + href + '" data-iframely-url="//cdn.iframe.ly/lYQs7A9"></a></div></div>' }
+    return {
+      __html: (process.env.IFRAMELY_API_KEY ? 
+          '<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="' + href + '" data-iframely-url="//cdn.iframe.ly/api/iframe?url=' + encodeURI(href) + '&api_key=' + process.env.IFRAMELY_API_KEY + '&omit_script=1"></a></div></div>'
+          : ''
+      )
+    }
   }
 
   render() {
