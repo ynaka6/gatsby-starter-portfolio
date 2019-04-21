@@ -2,6 +2,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import tw from "tailwind.macro"
+import rehypeReact from "rehype-react"
+import Iframely from "@components/atoms/iframely"
 
 const ContentStyled = styled.div`
   ${tw`p-4 leading-normal`};
@@ -60,8 +62,15 @@ const ContentStyled = styled.div`
   }
 `
 
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { "iframely": Iframely },
+}).Compiler
+
 const PostContent = ({ post }) => {
-  return <ContentStyled dangerouslySetInnerHTML={{ __html: post.html }} />
+  return (
+    <ContentStyled>{renderAst(post.htmlAst)}</ContentStyled>
+  )
 }
  
 

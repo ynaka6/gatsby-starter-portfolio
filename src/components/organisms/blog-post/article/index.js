@@ -44,15 +44,15 @@ const ArticleSection = ({ post, previous, next}) => (
       <hr/>
       <PostContent post={post} />
       <hr/>
-      <ul class="list-reset p-4 flex justify-between items-center">
-        <li class="w-1/2">
+      <ul className="list-reset p-4 flex justify-between items-center">
+        <li className="w-1/2">
           {previous && (
             <Link to={`post/${previous.fields.slug}`} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
-        <li class="w-1/2">
+        <li className="w-1/2">
           {next && (
             <Link to={`post/${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →

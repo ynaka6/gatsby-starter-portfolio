@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import SEO from "@components/seo"
 import Layout from "@components/templates/layout"
 import Breadcrumb from "@components/molecules/breadcrumb"
 import ArticleSection from "@components/organisms/blog-post/article"
 import ProfileSection from "@components/organisms/blog-post/profile"
-import SEO from "@components/seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
         slug
       }
       excerpt(pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         description

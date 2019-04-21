@@ -106,7 +106,8 @@ module.exports = {
               showLineNumbers: false,
               noInlineHighlight: false,
             },
-          }
+          },
+          `gatsby-remark-component`
         ],
       },
     },

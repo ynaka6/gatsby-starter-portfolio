@@ -75,3 +75,10 @@ $ cd [project name]
 $ gatsby develop
 ```
 ※　[project name]は任意の名称を指定してください。プロジェクトルートのディレクトリ名になります
+
+
+## 最後に
+本サイトのソースコードはgithubの[nakanakamu0828/gatsby-starter-portfolio](https://github.com/nakanakamu0828/gatsby-starter-portfolio) をご確認ください。
+サンプル的なものになりますが、お役に立てた際はStarなど頂けると幸いです。
+
+<iframely href="https://github.com/nakanakamu0828/gatsby-starter-portfolio"></iframely>
