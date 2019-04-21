@@ -11,6 +11,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
+  // Netlifyの_redirectsファイルを生成
   createRedirect({
     fromPath: 'https://gatsby-starter-portfolio-nnn.netlify.com/*',
     toPath: 'https://gatsby-starter-portfolio.nakamu.life/:splat',
@@ -19,6 +20,8 @@ exports.createPages = ({ graphql, actions }) => {
   })
   
 
+  // ブログの一覧・記事ページを作成
+  const blogPosts = path.resolve(`./src/templates/blog-posts.js`)
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   return graphql(
     `
@@ -52,6 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+      // 記事ページ
       createPage({
         path: `post${post.node.fields.slug}`,
         component: blogPost,
@@ -60,6 +64,22 @@ exports.createPages = ({ graphql, actions }) => {
           previous,
           next,
         },
+      })
+
+      // 一覧ページ
+      const postsPerPage = 20
+      const numPages = Math.ceil(posts.length / postsPerPage)
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+          component: blogPosts,
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1,
+          },
+        })
       })
     })
 

@@ -25,6 +25,7 @@ class BlogPostTemplate extends React.Component {
           <div className="flex flex-col justify-center">
             <Breadcrumb breadcrumbs={[
               { to: '/', label: 'Home' },
+              { to: '/posts', label: '記事一覧' },
               { to: `/post/${post.fields.slug}`, label: post.frontmatter.title, active: true },
             ]}
             />

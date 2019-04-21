@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import tw from "tailwind.macro"
@@ -29,6 +30,9 @@ const Blog = (props) => {
               </div>
             ))}
 
+          </div>
+          <div className="flex justify-center">
+            <Link to="/posts" className="my-10 py-4 px-20 text-grey-darkest bg-grey-lighter hover:bg-grey-light font-bold border border-grey-darkest rounded-sm no-underline">記事一覧へ</Link>
           </div>
         </div>
       </InViewMonitor>
