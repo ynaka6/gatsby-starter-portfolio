@@ -52,6 +52,7 @@ GatsbyJSは、ReactJSで構築された静的ジェネレーターで高速にWe
 - [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/) : 見出しにid属性をつける
 - [gatsby-remark-toc](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) : markdownから目次を生成する
 - [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/): コードハイライトとして[prismjs](https://prismjs.com/)を利用
+- [gatsby-remark-component](https://www.gatsbyjs.org/packages/gatsby-remark-component/) : markdown内でReactのComponentを利用
 - [gatsby-plugin-alias-imports](https://www.gatsbyjs.org/packages/gatsby-plugin-alias-imports/) : import宣言のaliasとして利用。
 
 ```javascript
@@ -61,6 +62,7 @@ import '../../components/navbar.js'
 ```
 
 - [gatsby-plugin-netlify](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/) : Netlifyの_redirecsファイルを生成するのに利用しています
+- [gatsby-plugin-env-variables](https://www.gatsbyjs.org/packages/gatsby-plugin-env-variables/) : 環境変数を利用する場合に使います
 
 ### それ以外のライブラリ
 - [TailwindCSS](https://tailwindcss.com/docs/what-is-tailwind/) : デザインのベースは[TailwindCSS](https://tailwindcss.com/docs/what-is-tailwind/)でマークアップしています
