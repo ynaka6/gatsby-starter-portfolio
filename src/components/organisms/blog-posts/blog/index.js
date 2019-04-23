@@ -7,7 +7,7 @@ import SectionTitle from "@components/atoms/section_title";
 import PostCard from '@components/molecules/post-card';
 
 const Section = styled.section`
-  ${tw`w-full bg-white`};
+  ${tw`w-full`};
 `
 
 const Blog = ({ posts, pageContext }) => {
@@ -37,7 +37,7 @@ const Blog = ({ posts, pageContext }) => {
         classNameNotInView='inview-section-hidden'
         classNameInView='inview-section-active'
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-10">
           <SectionTitle title={`Blog`} subtitle="最新記事一覧" />
           <div className="lg:flex justify-center w-full mt-6 mb-10">
 

@@ -19,13 +19,17 @@ const SectionStyled = styled.section`
   }
 `
 
+const TitleStyled = styled.h1`
+  ${tw`text-black font-bold my-5 text-5xl leading-loose`};
+`
+
 const Welcome = () => (
   <SectionStyled>
     <div className="container mx-auto my-20">
-      <div className="flex justify-center items-center px-4 p-10">
+      <div className="flex justify-center items-center px-4 px-10 py-20">
           <div className="text-center w-full">
             <h3 className="text-black text-3xl">Hi, Everyone</h3>
-            <h1 className="text-black font-bold my-5 text-5xl">I'm Nakamu.</h1>
+            <TitleStyled>I'm Nakamu.</TitleStyled>
             <p className="text-black text-3xl">WEB Developer & Mentor</p>
             <div className="my-10">
               <a href="https://github.com/nakanakamu0828" target="_blank" rel="noreferrer noopener" aria-label="github" className="text-white hover:text-grey-darker mr-6">

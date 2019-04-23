@@ -13,7 +13,7 @@ const Contact = () => (
       <form
         name="contact"
         method="post"
-        className="bg-white border shadow-md rounded mx-2 lg:mx-0 lg:px-8 pb-8 mt-5 mb-4"
+        className="bg-white border shadow-md rounded mx-2 lg:mx-0 lg:px-8 pt-10 pb-8 mt-5 mb-4"
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" /> 

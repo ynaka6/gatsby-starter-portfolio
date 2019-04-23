@@ -20,7 +20,7 @@ const Blog = (props) => {
         classNameNotInView='inview-section-hidden'
         classNameInView='inview-section-active'
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-20">
           <SectionTitle title={`Blog`} subtitle="最新記事一覧" />
           <div className="lg:flex justify-center w-full mt-6 mb-10">
 

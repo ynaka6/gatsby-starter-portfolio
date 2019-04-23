@@ -97,7 +97,7 @@ const About = () => (
       classNameNotInView='inview-section-hidden'
       classNameInView='inview-section-active'
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-20">
         <SectionTitle title="ABOUT" subtitle="プロフィール" />
         <div className="lg:flex w-full my-6">
           <div className="flex-1 px-2">

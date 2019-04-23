@@ -16,7 +16,7 @@ const Works = () => (
         classNameNotInView='inview-section-hidden'
         classNameInView='inview-section-active'
       >
-        <div className="container lg:w-2/3 mx-auto">
+        <div className="container lg:w-2/3  mt-20 mx-auto">
           <SectionTitle title="Work Experience" subtitle="直近の職務経歴 & エンジニア活動" />
           <Timeline works={json} />
         </div>

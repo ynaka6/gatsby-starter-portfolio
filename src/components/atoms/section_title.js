@@ -3,7 +3,7 @@ import styled from "styled-components"
 import tw from "tailwind.macro"
 
 const TitleStyled = styled.h2`
-  ${tw`text-center w-full font-bold mt-20 mb-10 text-4xl relative inline-block px-5`};
+  ${tw`text-center w-full font-bold mb-10 text-4xl relative inline-block px-5`};
   
   &:before {
     content: "";
