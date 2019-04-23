@@ -7,6 +7,7 @@
 <h1 align="center">
   Gatsbyを利用したポートフォリオ
 </h1>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1d7bf9b9-71a7-44d9-b3eb-d958741f6455/deploy-status)](https://app.netlify.com/sites/gatsby-starter-portfolio-nnn/deploys)
 
 GatsbyJS + TailwindCSSを利用したポートフォリオサイト。GatsbyJSの学習サンプルとして用意したもの入門サイトになります。
