@@ -127,7 +127,8 @@ module.exports = {
       resolve: `gatsby-plugin-env-variables`,
       options: {
         whitelist: [
-          "IFRAMELY_API_KEY"
+          "IFRAMELY_API_KEY",
+          "GOOGLE_SITE_VERIFICATION"
         ]
       },
     },
