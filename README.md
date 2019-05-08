@@ -43,7 +43,6 @@ GatsbyJS + TailwindCSSを利用したポートフォリオサイト。GatsbyJS�
 $ cat <<EOF > .env
 GOOGLE_ANALYTICS_TRACKING_ID=
 IFRAMELY_API_KEY=
-GOOGLE_SITE_VERIFICATION=
 EOF
 ```
 
@@ -51,7 +50,6 @@ EOF
 --------------|----------------------------
 GOOGLE_ANALYTICS_TRACKING_ID |Googleアナリティクス トラッキングID
 IFRAMELY_API_KEY  |iframelyのAPI Key - 外部コンテンツのembedに利用
-GOOGLE_SITE_VERIFICATION  |Google Search Consoleの認証コード
 
 
 ## 利用しているプラグイン/ライブラリ
